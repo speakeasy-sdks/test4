@@ -1,0 +1,60 @@
+openapi: 3.0.3
+info:
+  title: Movie and Quotes
+  version: 1.0.0
+  contact: {}
+servers:
+  - url: 'https://the-one-api.dev/v2'
+paths:
+  /movie/:
+    get:
+      summary: GetMovies
+      description: GetMovies
+      operationId: getmovies
+      responses:
+        '200':
+          description: ''
+  /movie/5cd95395de30eff6ebccde5c:
+    get:
+      summary: GetMovie
+      description: GetMovie
+      operationId: getmovie
+      responses:
+        '200':
+          description: ''
+  /movie/5cd95395de30eff6ebccde5c/quote:
+    get:
+      summary: GetMovieQuotes
+      description: GetMovieQuotes
+      operationId: getmoviequotes
+      parameters:
+        - name: page
+          in: query
+          schema:
+            type: string
+            example: '2'
+        - name: limit
+          in: query
+          schema:
+            type: string
+            example: '200 '
+      responses:
+        '200':
+          description: ''
+  /quote:
+    get:
+      summary: GetQuotes
+      description: GetQuotes
+      operationId: getquotes
+      responses:
+        '200':
+          description: ''
+  /quote/5cd96e05de30eff6ebcce7f2:
+    get:
+      summary: GetQuote
+      description: GetQuote
+      operationId: getquote
+      responses:
+        '200':
+          description: ''
+tags: []
